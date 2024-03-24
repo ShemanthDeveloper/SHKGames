@@ -42,9 +42,9 @@ const FindNumberGamePage=(props)=>{
       }
 
       useEffect(() => {
-        if (totalQuestions === 2) {
+        if (totalQuestions === 30) {
           setShowGamePage(false);
-          if(correctAns!==2){
+          if(correctAns!==30){
             setNxtButtonText(false)
           }else{
             setNxtButtonText(true)
@@ -53,7 +53,7 @@ const FindNumberGamePage=(props)=>{
       }, [totalQuestions]);
 
       const onClickNextLevel=()=>{
-        if(correctAns===2){
+        if(correctAns===30){
             changePage()
         }else{
             setTotalQuestions(0);
