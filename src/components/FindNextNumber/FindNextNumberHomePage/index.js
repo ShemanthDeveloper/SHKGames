@@ -96,7 +96,7 @@ const FindNumberGamePage=(props)=>{
             <div className="main-container-next-number">
         <h1 className="h1">Upto {level} Numbers</h1>
         <div className="img-container">
-          <img className="find-next-number-img" src="https://res.cloudinary.com/dvxhniunx/image/upload/v1711271063/IMG_1463_1_nad01b.jpg" alt="img"/>
+          <img className="find-next-number-img" src="https://res.cloudinary.com/dvxhniunx/image/upload/v1711341549/IMG-20240325-WA0004_oynr6o.jpg" alt="img"/>
         </div>
         <h3 className="second-heading"> What number comes next?</h3>
         <div className="game-container">
@@ -114,7 +114,7 @@ const FindNumberGamePage=(props)=>{
         </div>
         {val !== null && (
   <h2 className={val?"find-nxt-num-result-crt":"find-nxt-num-result-rng"}>
-    {val ? "Nice Aarav You Are Right" : "Aarav You Are Wrong"}
+    {val ? "Nice Sudhiksha You Are Right" : "Sudhiksha You Are Wrong"}
   </h2>
 )}
         

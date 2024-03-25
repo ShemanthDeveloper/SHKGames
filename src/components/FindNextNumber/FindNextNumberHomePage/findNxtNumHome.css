@@ -8,6 +8,7 @@
     align-items: center;
     position: fixed;
     font-family: Garamond;
+    font-family: Garamond, "Roboto", serif;
 }
 .number-input{
     height: 40px;
@@ -104,7 +105,8 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: Garamond;
+    font-family: Garamond "ROBOTO";
+    font-family: Garamond, "Roboto", serif;
 }
 .find-next-number-img{
     height: 100%;
