@@ -19,6 +19,12 @@ const FindNumberGamePage=(props)=>{
         const newNumber = Math.floor(Math.random() * level); // Generate a random single-digit number
         setNumber(newNumber);
       };
+
+      const handleKeyDown = (e) => {
+        if (e.key === "Enter") {
+          handleCheckValue();
+        }
+      };
     
       
 
@@ -42,9 +48,9 @@ const FindNumberGamePage=(props)=>{
       }
 
       useEffect(() => {
-        if (totalQuestions === 30) {
+        if (totalQuestions === 5) {
           setShowGamePage(false);
-          if(correctAns!==30){
+          if(correctAns!==5){
             setNxtButtonText(false)
           }else{
             setNxtButtonText(true)
@@ -53,7 +59,7 @@ const FindNumberGamePage=(props)=>{
       }, [totalQuestions]);
 
       const onClickNextLevel=()=>{
-        if(correctAns===30){
+        if(correctAns===5){
             changePage()
         }else{
             setTotalQuestions(0);
@@ -99,7 +105,7 @@ const FindNumberGamePage=(props)=>{
             <div className="box2"><FaArrowRightLong className="icon"/></div>
             
             <div className="box">
-                <input type="number" onClick={()=>setValue(null)}  value={ans}  className="number-input" onChange={(e)=>setAnwser(e.target.value)}/>
+                <input onKeyDown={handleKeyDown} type="number" onClick={()=>setValue(null)}  value={ans}  className="number-input" onChange={(e)=>setAnwser(e.target.value)}/>
             </div>
         </div>
         <div className="btn-container">
